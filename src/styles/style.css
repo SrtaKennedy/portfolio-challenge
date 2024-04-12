@@ -1,0 +1,468 @@
+/*ESTILOS GLOBAIS*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--Popis);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(255, 237, 240);
+    height: 100vh;
+}
+
+.interface {
+    max-width: 1208px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.btn-contato button {
+    padding: 10px 35px;
+    font-weight: 600;
+    font-size: 18px;
+    background-color: rgb(247, 117, 139);
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+h2.titulo {
+    color: #1b1b1b;
+    font-size: 38px;
+    text-align: center;
+}
+
+h2.titulo span {
+    color: #ff3863;
+}
+
+button:hover, form .btn-enviar input:hover {
+    box-shadow: 0px 0px 8px #ff3863;
+    transform: scale(1.05);
+}
+
+i {
+    color: white;
+}
+
+/* Estilo da Cabeça */
+
+header {
+    padding: 40px 4%;
+}
+
+header > .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: #5c5c5c;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s; /* serve para deixar mais suave*/
+}
+
+header a:hover {
+    color: rgb(251, 90, 117);
+    transform: scale(1.05); /*só em elementos block-level, é o 'link' é inline-level, para fazer funcionar precisa converter para inline-block, igual ali em cima, no: header a */
+}
+
+header nav ul {
+    list-style-type: none;
+} 
+
+header nav ul li {
+    display: inline-block; /* os elementos ficaram um ao lado do outro */
+    padding: 0 40px;
+}
+
+/* ESTILO DO TOPO DO SITE */
+
+section.topo-do-site {
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex { /* aqui onde deixa o texto alinhado com a imagem, pq o display flex já foi chamado nos ESTILOS GLOBAIS*/
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.topo-do-site h1 {
+    color: #080808;
+    line-height: 50px;
+    font-size: 30px;
+    animation: pulse 0.9s infinite alternate;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        filter: brightness(100%);
+    }
+    100% {
+        transform: scale(1.1);
+        filter: brightness(200%);
+    }
+}
+
+.topo-do-site .txt-esquerdo h1 span {
+    color: #ff3863;
+}
+
+.topo-do-site .txt-esquerdo p {
+    color: #424242;
+    font-size: 18px;
+    font-weight: 400;
+    margin: 40px 0px;
+}
+
+.topo-do-site .img-topo-site img{
+    position: relative;
+    -webkit-box-shadow: 16px 12px 20px 2px rgba(255,171,185,1);
+    -moz-box-shadow: 16px 12px 20px 2px rgba(255,171,185,1);
+    box-shadow: 16px 12px 20px 2px rgba(255,171,185,1);
+    border-radius: 400px;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+/* ANIMAÇÕES DA IMAGEM*/
+
+@keyframes flutuar {
+    0% {
+        top: 0;
+
+    }
+    100% {
+        top: 30px;
+    }
+}
+
+/* ESPECIALIDADES */
+
+section.especialidades {
+    padding: 40px 4%;
+}
+
+section.especialidades .flex-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+}
+
+.especialidades .especialidades-box {
+    color:#080808;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 45px;
+    transition: .3s;
+}
+
+.especialidades .especialidades-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #6e6e6e7e;
+}
+
+.especialidades .especialidades-box i {
+    font-size: 60px;
+    color: #ff006f;
+}
+
+.especialidades .especialidades-box h3 {
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+.especialidades .especialidades-box p {
+    text-align: justify;
+}
+
+/* SOBRE */
+
+section.sobre {
+    padding: 80px 4%;
+}
+
+section.sobre .flex {
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .img-sobre img {
+    border-radius: 20px;
+    -webkit-box-shadow: 8px 8px 9px 4px rgba(255,171,185,0.89);
+    -moz-box-shadow: 8px 8px 9px 4px rgba(255,171,185,0.89);
+    box-shadow: 8px 8px 9px 4px rgba(255,171,185,0.89);
+}
+
+.sobre .txt-sobre {
+    color: #424242;
+}
+
+.sobre .txt-sobre h2 {
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre h2 span {
+    color: #ff3863;
+    display: block;
+}
+
+.sobre .txt-sobre p {
+    margin: 20px 0px;
+    text-align: justify;
+}
+
+.sobre .txt-sobre p span {
+    color: #ff3863;
+    font-weight: 500;
+}
+
+.btn-social button{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%; /* ou pode usar 30px, fica sua preferência*/
+    border: 0;
+    background-color: #ff3863;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+}
+
+/* PORTFOLIO */ 
+
+section.portfolio {
+    padding: 80px 4%;
+    box-shadow: 0 0 50px 10px #ff38634a;
+}
+
+section.portfolio .flex {
+    margin-top: 60px;
+    justify-content: space-around; /* pode ser utilizado o gap, porém, nesse caso, o melhor é usar o justify-content*/
+}
+
+.img-port {
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 8s;
+    cursor: pointer;
+    /* border-radius: 40px; */
+    position: relative; /* importante ter para fazer o efeito overlay funcionar*/
+}
+
+.img-port:hover { /* para o efeito de rolagem*/
+    background-position: 100% 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000b8;
+    /* border-radius: 40px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+/* FORMS */
+
+section.formulario {
+    padding: 80px 4%;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input, form textarea {
+    width: 100%;
+    background-color: #34343430;
+    border: none;
+    outline: none;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #Fff;
+    font-size: 18px;
+}
+
+form textarea {
+    resize: none;
+    max-height: 200px;
+}
+
+form input::placeholder, form textarea::placeholder {
+    color: #ff38634a;
+}
+
+form .btn-enviar {
+    margin-top: 25px;
+    text-align: center;
+}
+
+form .btn-enviar input { /* para estilizar um input especifico coloque [type=submit]*/ 
+    width: 120px;
+    background-color: #ff3863;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 15px 10px;
+    transition: .2s;
+}
+
+/* RODAPÉ */
+
+footer {
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px #ff38634a;
+}
+
+footer .flex {
+    justify-content: space-between;
+}
+
+footer .line-footer {
+    padding: 20px 0;
+}
+
+.borda {
+    border-top: 3px solid #ff38634a;
+}
+
+footer .line-footer p {
+    color: #303030;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 1020px) {
+    /* globais */
+
+    .flex {
+        flex-direction: column;
+    }
+
+    .interface .logo {
+        display: none;
+    }
+
+    h2.titulo {
+        font-size: 30px;
+        line-height: 32px;
+    }
+
+    /* cabecalho */
+    .menu-desktop, .btn-contato {
+        display: none;
+    }
+
+    /*topo do site*/
+
+    section.topo-do-site .flex {
+        gap: 40px;
+    }
+
+    section.topo-do-site {
+        padding: 20px 8%;
+    }
+
+    .topo-do-site h1 {
+        font-size: 30px;
+    }
+
+    .topo-do-site .img-topo-site img {
+        width: 100%;
+    }
+
+    /* ESPECIALIDADES */
+
+    section.especialidades {
+        padding: 40px 8%;
+    }
+
+    section.especialidades .flex-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    /* sobre */
+
+    section.sobre {
+        padding: 80px 8%;
+    }
+
+    section.sobre .flex {
+        flex-direction: column-reverse;
+    }
+
+    .sobre .txt-sobre h2 {
+        font-size: 32px;
+        line-height: 35px;
+        text-align: center;
+    }
+
+    .btn-social {
+        text-align: center;
+    }
+
+    .img-sobre img{
+        width: 100%;
+    }
+
+    /* Portfolio */
+
+    section.portfolio {
+        padding: 80px 8%;
+    }
+
+    section.portfolio .flex {
+        gap: 50px;
+    }
+
+    .img-port {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    /* rodapé */
+    footer .flex {
+        gap: 30px;
+    }
+
+    footer .line-footer {
+        text-align: center;
+    }
+
+}
