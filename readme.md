@@ -4,6 +4,4 @@
 </p>
 
 <p>
-Com base nos aprendizados/conhecimentos adquiridos na </p> 
-
-[plataforma Alura](https://www.alura.com.br/).
+Com base nos aprendizados/conhecimentos adquiridos na </p>[plataforma Alura](https://www.alura.com.br/).
